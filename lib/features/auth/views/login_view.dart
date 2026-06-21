@@ -36,7 +36,10 @@ class LoginView extends StatelessWidget {
                 const VerticalSpace(height: 16),
                 const PrimaryTextFormField(hint: "Password", isPassword: true),
                 const VerticalSpace(height: 8),
-                const RememberMeCheckBoxAndForgotPasswordSection(),
+                RememberMeCheckBoxAndForgotPasswordSection(
+                  onForgotPasswordPressed: () =>
+                      context.push(AppRoutes.forgotPassword),
+                ),
                 const VerticalSpace(height: 32),
                 const PrimaryButton(text: "Login", onPressed: null),
                 const VerticalSpace(height: 46),

@@ -21,7 +21,7 @@ class AppLightThemes {
       OnboardingGradientThemeExtension(gradient: onboardingGradient),
     ],
   );
-// ── Onboarding Gradient ─────────────────────────────────────────────────
+  // ── Onboarding Gradient ─────────────────────────────────────────────────
   static final LinearGradient onboardingGradient = LinearGradient(
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
@@ -36,6 +36,8 @@ class AppLightThemes {
     secondaryContainer: AppColors.lightGrey,
     surface: AppColors.moreLightGrey,
     tertiary: AppColors.blackColor,
+    outline: AppColors.white,
+    scrim: AppColors.notificationBadge,
   );
 
   // ── Elevated Button ────────────────────────────────────────────────────────
@@ -96,5 +98,6 @@ class AppLightThemes {
     labelMedium: AppStyles.textStyleSemiBold16,
     bodyMedium: AppStyles.textStyleRegular14,
     bodySmall: AppStyles.textStyleRegular12,
+    displayLarge: AppStyles.textStyleBold18
   );
 }

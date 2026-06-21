@@ -56,6 +56,7 @@ flutter:
   assets:
     - assets/images/svgs/
     - assets/images/
+    - assets/images/place_holder.png
 
   # example:
   # fonts:

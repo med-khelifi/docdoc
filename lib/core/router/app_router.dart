@@ -1,6 +1,9 @@
 import 'package:doctorine/core/router/app_routes.dart';
+import 'package:doctorine/features/auth/views/fill_profile_view.dart';
 import 'package:doctorine/features/auth/views/login_view.dart';
 import 'package:doctorine/features/auth/views/sign_up_view.dart';
+import 'package:doctorine/features/auth/views/forgot_password_view.dart';
+import 'package:doctorine/features/home/home_view.dart';
 import 'package:doctorine/features/onboarding/ui/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -8,7 +11,7 @@ import 'package:go_router/go_router.dart';
 class AppRouter {
   AppRouter._();
   static final GoRouter router = GoRouter(
-    initialLocation:AppRoutes.onboarding,
+    initialLocation: AppRoutes.home,
     routes: [
       GoRoute(
         path: AppRoutes.onboarding,
@@ -26,10 +29,19 @@ class AppRouter {
         builder: (context, state) => const SignUpView(),
       ),
       GoRoute(
+        path: AppRoutes.forgotPassword,
+        name: AppRoutes.forgotPassword,
+        builder: (context, state) => const ForgotPasswordView(),
+      ),
+      GoRoute(
+        path: AppRoutes.fillProfile,
+        name: AppRoutes.fillProfile,
+        builder: (context, state) => const FillProfileView(),
+      ),
+      GoRoute(
         path: AppRoutes.home,
         name: AppRoutes.home,
-        builder: (context, state) =>
-            const Scaffold(body: Center(child: Text("Home Screen"))),
+        builder: (context, state) => const HomeView(),
       ),
     ],
     errorBuilder: (context, state) =>

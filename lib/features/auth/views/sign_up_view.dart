@@ -9,7 +9,6 @@ import 'package:doctorine/features/auth/views/widgets/bottom_text.dart';
 import 'package:doctorine/features/auth/views/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:phone_field_plus/phone_field_plus.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});

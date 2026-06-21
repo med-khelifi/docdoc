@@ -1,14 +1,21 @@
 // ignore_for_file: prefer_single_quotes
 class AppAssets {
   AppAssets._();
-  
+
   /// Assets for assetsImagesGoogleImage
   /// assets/images/google_image.png
-  static const String assetsImagesGoogleImage = "assets/images/google_image.png";
+  static const String assetsImagesGoogleImage =
+      "assets/images/google_image.png";
 
   /// Assets for assetsImagesOnboardingDoctor
   /// assets/images/onboarding_doctor.png
-  static const String assetsImagesOnboardingDoctor = "assets/images/onboarding_doctor.png";
+  static const String assetsImagesOnboardingDoctor =
+      "assets/images/onboarding_doctor.png";
+
+  /// Assets for assetsImagesPlaceHolder
+  /// assets/images/place_holder.png
+  static const String assetsImagesPlaceHolder =
+      "assets/images/place_holder.png";
 
   /// Assets for assetsImagesSplash
   /// assets/images/splash.png
@@ -20,7 +27,8 @@ class AppAssets {
 
   /// Assets for assetsImagesSvgsAppLogo
   /// assets/images/svgs/app_logo.svg
-  static const String assetsImagesSvgsAppLogo = "assets/images/svgs/app_logo.svg";
+  static const String assetsImagesSvgsAppLogo =
+      "assets/images/svgs/app_logo.svg";
 
   /// Assets for assetsImagesSvgsDocdoc
   /// assets/images/svgs/Docdoc.svg
@@ -28,6 +36,6 @@ class AppAssets {
 
   /// Assets for assetsImagesSvgsLogoBackground
   /// assets/images/svgs/logo_background.svg
-  static const String assetsImagesSvgsLogoBackground = "assets/images/svgs/logo_background.svg";
+  static const String assetsImagesSvgsLogoBackground =
+      "assets/images/svgs/logo_background.svg";
 }
-
