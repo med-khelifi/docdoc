@@ -8,9 +8,12 @@ class RecommendationListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      spacing: 16,
-      children: [_buildDoctorImage(), _buildDoctorInfo(context)],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        spacing: 16,
+        children: [_buildDoctorImage(), _buildDoctorInfo(context)],
+      ),
     );
   }
 

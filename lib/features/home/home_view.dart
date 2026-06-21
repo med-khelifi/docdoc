@@ -36,7 +36,10 @@ class HomeView extends StatelessWidget {
               ),
             ),
             const SliverToBoxAdapter(child: VerticalSpace(height: 16)),
-            const RecommendationList(),
+            const SliverPadding(
+              padding: EdgeInsets.symmetric(horizontal: 12.0),
+              sliver: RecommendationList(),
+            ),
             const SliverToBoxAdapter(child: VerticalSpace(height: 16)),
           ],
         ),

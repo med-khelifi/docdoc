@@ -9,7 +9,7 @@ class RecommendationList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.separated(
       itemBuilder: (context, index) => const RecommendationListItem(),
-      itemCount: 5,
+      itemCount: 10,
       separatorBuilder: (context, index) => const VerticalSpace(height: 16),
     );
   }
