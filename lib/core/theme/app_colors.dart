@@ -8,4 +8,5 @@ abstract class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color blackColor = Color(0xFF000000);
   static const Color notificationBadge = Color(0xFFfe4c5f);
+  static const Color transparent = Colors.transparent;
 }

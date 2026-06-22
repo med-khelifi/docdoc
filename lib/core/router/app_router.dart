@@ -5,14 +5,25 @@ import 'package:doctorine/features/auth/views/sign_up_view.dart';
 import 'package:doctorine/features/auth/views/forgot_password_view.dart';
 import 'package:doctorine/features/home/home_view.dart';
 import 'package:doctorine/features/onboarding/ui/onboarding_view.dart';
+import 'package:doctorine/features/root/logic/root_cubit.dart';
+import 'package:doctorine/features/root/views/root_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   AppRouter._();
   static final GoRouter router = GoRouter(
-    initialLocation: AppRoutes.home,
+    initialLocation: AppRoutes.root,
     routes: [
+      GoRoute(
+        path: AppRoutes.root,
+        name: AppRoutes.root,
+        builder: (context, state) => BlocProvider(
+          create: (context) => RootCubit(),
+          child: const RootView(),
+        ),
+      ),
       GoRoute(
         path: AppRoutes.onboarding,
         name: AppRoutes.onboarding,
