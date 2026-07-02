@@ -8,6 +8,7 @@ import 'package:doctorine/features/onboarding/ui/onboarding_view.dart';
 import 'package:doctorine/features/profile/views/personal_information_view.dart';
 import 'package:doctorine/features/root/logic/root_cubit.dart';
 import 'package:doctorine/features/root/views/root_view.dart';
+import 'package:doctorine/features/settings/views/faq_view.dart';
 import 'package:doctorine/features/settings/views/language_view.dart';
 import 'package:doctorine/features/settings/views/settings_view.dart';
 import 'package:flutter/material.dart';
@@ -71,6 +72,11 @@ class AppRouter {
         path: AppRoutes.personalInformations,
         name: AppRoutes.personalInformations,
         builder: (context, state) => const PersonalInformationView(),
+      ),
+      GoRoute(
+        path: AppRoutes.faq,
+        name: AppRoutes.faq,
+        builder: (context, state) => const FaqView(),
       ),
     ],
     errorBuilder: (context, state) =>

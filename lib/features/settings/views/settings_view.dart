@@ -25,9 +25,10 @@ class SettingsView extends StatelessWidget {
               icon: CupertinoIcons.bell,
               title: "Notification",
             ),
-            const SettingsListTile(
+            SettingsListTile(
               icon: CupertinoIcons.question,
               title: "FQA",
+              onPressed: () => context.push(AppRoutes.faq),
             ),
             SettingsListTile(
               icon: Icons.language,

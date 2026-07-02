@@ -10,4 +10,5 @@ class AppRoutes {
   static const String settings = '/settings';
   static const String languages = '/languages';
   static const String personalInformations = '/personal-informations';
+  static const String faq = '/faq';
 }
