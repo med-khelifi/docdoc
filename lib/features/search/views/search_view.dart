@@ -1,4 +1,4 @@
-import 'package:doctorine/core/extensions/build_context_extensions.dart';
+import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -7,11 +7,20 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          "Search Screen",
-          style: context.textStyles.displayLarge,
-        ),
+      body: Column(
+        children: [
+          const VerticalSpace(height: 50),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('Item $index'),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
