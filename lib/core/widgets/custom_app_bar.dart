@@ -54,15 +54,16 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       width: 45,
       height: 45,
+      padding: const EdgeInsets.only(
+        left: 10,
+      ),
       decoration: BoxDecoration(
           border: Border.all(color: context.colorScheme.surface, width: 1),
           borderRadius: BorderRadius.circular(15),
           shape: BoxShape.rectangle),
-      child: Center(
-        child: GestureDetector(
-          onTap: onTap,
-          child: child,
-        ),
+      child: GestureDetector(
+        onTap: onTap,
+        child: child,
       ),
     );
   }
