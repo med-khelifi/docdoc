@@ -1,0 +1,74 @@
+{
+  "welcomeBack": "مرحباً بعودتك",
+  "welcomeBackDescription": "يسعدنا عودتك إلينا، لا يمكننا الانتظار لرؤية ما قمت به منذ آخر تسجيل دخول لك.",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "rememberMe": "تذكرني",
+  "forgotPassword": "هل نسيت كلمة المرور؟",
+  "forgotPasswordTitle": "نسيت كلمة المرور",
+  "forgotPasswordDescription": "في تطبيقنا، نأخذ أمان معلوماتك على محمل الجد.",
+  "resetPassword": "إعادة تعيين كلمة المرور",
+  "login": "تسجيل الدخول",
+  "orSignInWith": "أو سجل دخولك باستخدام",
+  "dontHaveAccount": "ليس لديك حساب بعد؟ ",
+  "signUp": "إنشاء حساب",
+  "signIn": "تسجيل الدخول",
+  "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+  "createAccount": "إنشاء حساب",
+  "phoneNumber": "رقم الهاتف",
+  "submit": "إرسال",
+  "fillYourProfile": "املأ ملفك الشخصي",
+  "fillProfileDescription": "يرجى قضاء بضع دقائق لملء ملفك الشخصي بأكبر قدر ممكن من التفاصيل.",
+  "fullName": "الاسم الكامل",
+  "birthDate": "تاريخ الميلاد",
+  "getStarted": "ابدأ الآن",
+  "onboardingTitle": "أفضل تطبيق\nلحجز موعد طبيب",
+  "onboardingDescription": "إدارة وجدولة جميع مواعيدك الطبية بسهولة مع Docdoc للحصول على تجربة جديدة.",
+  "doctorSpecialty": "تخصص الطبيب",
+  "seeAll": "عرض الكل",
+  "recommendationDoctor": "الأطباء الموصى بهم",
+  "hiUser": "مرحباً، {name}!",
+  "@hiUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "howAreYouToday": "كيف حالك اليوم؟",
+  "bookAndScheduleTitle": "احجز وجدول\nمع أقرب طبيب",
+  "findNearby": "البحث عن القريبين",
+  "settings": "الإعدادات",
+  "notification": "الإشعارات",
+  "faq": "الأسئلة الشائعة",
+  "language": "اللغة",
+  "darkMode": "الوضع الداكن",
+  "selectLanguage": "اختر اللغة",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "byLoggingYouAgreeToOur": "من خلال تسجيل الدخول، فإنك توافق على ",
+  "termsAndConditions": "الشروط والأحكام ",
+  "and": "و ",
+  "privacyPolicy": "سياسة الخصوصية.",
+  "undefinedRoute": "هذا المسار غير محدد",
+  "doctorNamePlaceholder": "د. جون دو",
+  "doctorSpecialtyPlaceholder": "عام | مستشفى غاتوت سوبروتو",
+  "doctorReviewsPlaceholder": "⭐ 4.9 ({count} تقييم)",
+  "@doctorReviewsPlaceholder": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "search": "البحث",
+  "searchItemPlaceholder": "العنصر {index}",
+  "@searchItemPlaceholder": {
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "profile": "الملف الشخصي"
+}

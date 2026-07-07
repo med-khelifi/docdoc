@@ -14,7 +14,7 @@ class FillProfileView extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: PrimaryButton(text: "Submit", onPressed: () {}),
+        child: PrimaryButton(text: context.l10n.submit, onPressed: () {}),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -25,22 +25,22 @@ class FillProfileView extends StatelessWidget {
               children: [
                 const VerticalSpace(height: 50),
                 Text(
-                  "Fill Your Profile",
+                  context.l10n.fillYourProfile,
                   style: context.textStyles.titleMedium,
                 ),
                 const VerticalSpace(height: 8),
                 Text(
-                  "Please take a few minutes to fill out your profile with as much detail as possible.",
+                  context.l10n.fillProfileDescription,
                   style: context.textStyles.bodyMedium,
                 ),
                 const VerticalSpace(height: 36),
                 PicturePicker(onPressed: () {}),
                 const VerticalSpace(height: 35),
-                const PrimaryTextFormField(hint: "Full Name"),
+                PrimaryTextFormField(hint: context.l10n.fullName),
                 const VerticalSpace(height: 16),
-                const PrimaryTextFormField(hint: "Birth Date"),
+                PrimaryTextFormField(hint: context.l10n.birthDate),
                 const VerticalSpace(height: 16),
-                const CustomPhoneTextField(hint: "Phone Number"),
+                CustomPhoneTextField(hint: context.l10n.phoneNumber),
                 const VerticalSpace(height: 24),
               ],
             ),

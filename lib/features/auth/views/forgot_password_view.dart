@@ -18,14 +18,14 @@ class ForgotPasswordView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const VerticalSpace(height: 50),
-                Text("Forgot Password", style: context.textStyles.titleMedium),
+                Text(context.l10n.forgotPasswordTitle, style: context.textStyles.titleMedium),
                 const VerticalSpace(height: 8),
                 Text(
-                  "At our app, we take the security of your information seriously.",
+                  context.l10n.forgotPasswordDescription,
                   style: context.textStyles.bodyMedium,
                 ),
                 const VerticalSpace(height: 36),
-                const PrimaryTextFormField(hint: "Email"),
+                PrimaryTextFormField(hint: context.l10n.email),
               ],
             ),
           ),
@@ -33,7 +33,7 @@ class ForgotPasswordView extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-        child: PrimaryButton(text: "Reset Password", onPressed: () {}),
+        child: PrimaryButton(text: context.l10n.resetPassword, onPressed: () {}),
       ),
     );
   }

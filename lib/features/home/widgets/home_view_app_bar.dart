@@ -15,9 +15,9 @@ class HomeViewAppBar extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Hi, Omar!", style: context.textStyles.displayLarge),
+              Text(context.l10n.hiUser("Omar"), style: context.textStyles.displayLarge),
               Text(
-                "How Are you Today?",
+                context.l10n.howAreYouToday,
                 style: context.textStyles.bodySmall?.copyWith(height: 1.1),
               ),
             ],

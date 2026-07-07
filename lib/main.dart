@@ -10,7 +10,8 @@ void main() async {
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: kIsWeb
         ? HydratedStorageDirectory.web
-        : HydratedStorageDirectory((await getApplicationDocumentsDirectory()).path),
+        : HydratedStorageDirectory(
+            (await getApplicationDocumentsDirectory()).path),
   );
 
   runApp(

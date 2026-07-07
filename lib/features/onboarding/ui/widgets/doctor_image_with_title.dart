@@ -26,7 +26,7 @@ class DoctorImageWithTitle extends StatelessWidget {
           bottom: 20,
           right: 0,
           child: Text(
-            "Best Doctor\n Appointment App",
+            context.l10n.onboardingTitle,
             textAlign: TextAlign.center,
             style: context.textStyles.titleLarge!.copyWith(height: 1.3),
           ),

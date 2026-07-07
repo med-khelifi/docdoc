@@ -11,27 +11,27 @@ class TermsAndConditionsText extends StatelessWidget {
         textAlign: TextAlign.center,
         softWrap: true,
         text: TextSpan(
-          text: "By logging, you agree to our ",
+          text: context.l10n.byLoggingYouAgreeToOur,
           style: context.textStyles.bodyMedium?.copyWith(
             color: context.colorScheme.secondary,
             height: 1.4,
           ),
           children: [
             TextSpan(
-              text: " Terms & Conditions ",
+              text: context.l10n.termsAndConditions,
               style: context.textStyles.bodyMedium?.copyWith(
                 color: context.colorScheme.tertiary,
                 fontWeight: FontWeight.w600,
               ),
             ),
             TextSpan(
-              text: " and ",
+              text: context.l10n.and,
               style: context.textStyles.bodyMedium?.copyWith(
                 color: context.colorScheme.secondary,
               ),
             ),
             TextSpan(
-              text: " PrivacyPolicy.",
+              text: context.l10n.privacyPolicy,
               style: context.textStyles.bodyMedium?.copyWith(
                 color: context.colorScheme.tertiary,
                 fontWeight: FontWeight.w600,

@@ -1,42 +1,42 @@
 import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/helpers/context_extension.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:doctorine/core/localization/logic/locale_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LanguageView extends StatelessWidget {
   const LanguageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-   // final currentLocale = context.locale;
-
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              const LanguageViewAppBar(),
-              const VerticalSpace(height: 32),
-              _LanguageCard(
-                title: "english".tr(),
-                subtitle: "English",
-                isSelected: false,
-                onTap: () {
-                  context.setLocale(const Locale('en'));
-                },
-              ),
-              const VerticalSpace(height: 16),
-              _LanguageCard(
-                title: "arabic".tr(),
-                subtitle: "العربية",
-                isSelected: true,
-                onTap: () {
-                  context.setLocale(const Locale('ar'));
-                },
-              ),
-            ],
+          child: BlocBuilder<LocaleCubit, Locale>(
+            builder: (context, localeState) {
+              final isEn = localeState.languageCode == 'en';
+              return Column(
+                children: [
+                  const LanguageViewAppBar(),
+                  const VerticalSpace(height: 32),
+                  _LanguageCard(
+                    title: context.l10n.english,
+                    subtitle: "English",
+                    isSelected: isEn,
+                    onTap: () => context.read<LocaleCubit>().changeLocale('en'),
+                  ),
+                  const VerticalSpace(height: 16),
+                  _LanguageCard(
+                    title: context.l10n.arabic,
+                    subtitle: "العربية",
+                    isSelected: !isEn,
+                    onTap: () => context.read<LocaleCubit>().changeLocale('ar'),
+                  ),
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -70,9 +70,7 @@ class _LanguageCard extends StatelessWidget {
         curve: Curves.easeInOut,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         decoration: BoxDecoration(
-          color: isSelected
-              ? activeColor.withAlpha(13)
-              : Colors.transparent,
+          color: isSelected ? activeColor.withAlpha(13) : Colors.transparent,
           border: Border.all(
             color: isSelected ? activeColor : inactiveBorderColor,
             width: isSelected ? 2 : 1.2,
@@ -89,7 +87,8 @@ class _LanguageCard extends StatelessWidget {
                     title,
                     style: context.textStyles.bodyLarge?.copyWith(
                       color: context.colorScheme.tertiary,
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                      fontWeight:
+                          isSelected ? FontWeight.bold : FontWeight.w500,
                     ),
                   ),
                   const VerticalSpace(height: 4),
@@ -110,7 +109,8 @@ class _LanguageCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: isSelected ? activeColor : Colors.transparent,
                 border: Border.all(
-                  color: isSelected ? activeColor : context.colorScheme.secondary,
+                  color:
+                      isSelected ? activeColor : context.colorScheme.secondary,
                   width: 2,
                 ),
               ),
@@ -158,7 +158,7 @@ class LanguageViewAppBar extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            "select_language".tr(),
+            context.l10n.selectLanguage,
             style: context.textStyles.labelLarge,
           ),
           const Spacer(),
@@ -167,3 +167,4 @@ class LanguageViewAppBar extends StatelessWidget {
     );
   }
 }
+

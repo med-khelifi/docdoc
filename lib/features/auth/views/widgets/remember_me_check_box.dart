@@ -12,12 +12,12 @@ class RememberMeCheckBoxAndForgotPasswordSection extends StatelessWidget {
     return Row(
       children: [
         Checkbox(value: false, onChanged: (value) {}),
-        Text("Remember me", style: context.textStyles.bodySmall),
+        Text(context.l10n.rememberMe, style: context.textStyles.bodySmall),
         const Spacer(),
         GestureDetector(
           onTap: onForgotPasswordPressed,
           child: Text(
-            "Forgot Password?",
+            context.l10n.forgotPassword,
             style: context.textStyles.bodySmall!.copyWith(
               color: context.colorScheme.primary,
             ),

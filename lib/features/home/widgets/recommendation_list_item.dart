@@ -21,14 +21,14 @@ class RecommendationListItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Dr. John Doe", style: context.textStyles.displayLarge),
+        Text(context.l10n.doctorNamePlaceholder, style: context.textStyles.displayLarge),
         const VerticalSpace(height: 4),
         Text(
-          "General | RSUD Gatot Subroto",
+          context.l10n.doctorSpecialtyPlaceholder,
           style: context.textStyles.headlineSmall,
         ),
         const VerticalSpace(height: 12),
-        Text("⭐ 4.9 (200 Reviews)", style: context.textStyles.headlineSmall),
+        Text(context.l10n.doctorReviewsPlaceholder("200"), style: context.textStyles.headlineSmall),
       ],
     );
   }

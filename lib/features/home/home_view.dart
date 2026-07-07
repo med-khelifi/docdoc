@@ -1,3 +1,4 @@
+import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/core/widgets/text_title_with_text_button.dart';
 import 'package:doctorine/features/home/widgets/doctor_blue_container.dart';
@@ -19,8 +20,8 @@ class HomeView extends StatelessWidget {
           const SliverToBoxAdapter(child: VerticalSpace(height: 24)),
           SliverToBoxAdapter(
             child: TextTitleWithTextButton(
-              titleText: "Doctor Specialty",
-              buttonText: "See All",
+              titleText: context.l10n.doctorSpecialty,
+              buttonText: context.l10n.seeAll,
               onPressed: () {},
             ),
           ),
@@ -29,8 +30,8 @@ class HomeView extends StatelessWidget {
           const SliverToBoxAdapter(child: VerticalSpace(height: 16)),
           SliverToBoxAdapter(
             child: TextTitleWithTextButton(
-              titleText: "Recommendation Doctor",
-              buttonText: "See All",
+              titleText: context.l10n.recommendationDoctor,
+              buttonText: context.l10n.seeAll,
               onPressed: () {},
             ),
           ),
@@ -45,3 +46,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+

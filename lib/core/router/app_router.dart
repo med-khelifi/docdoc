@@ -1,3 +1,4 @@
+import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/router/app_routes.dart';
 import 'package:doctorine/features/auth/views/fill_profile_view.dart';
 import 'package:doctorine/features/auth/views/login_view.dart';
@@ -80,6 +81,6 @@ class AppRouter {
       ),
     ],
     errorBuilder: (context, state) =>
-        const Scaffold(body: Center(child: Text("this is undefined"))),
+        Scaffold(body: Center(child: Text(context.l10n.undefinedRoute))),
   );
 }

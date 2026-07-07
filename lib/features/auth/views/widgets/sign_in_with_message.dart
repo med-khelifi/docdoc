@@ -9,7 +9,7 @@ class SignInWithMessage extends StatelessWidget {
     return Row(
       children: [
         const Expanded(child: Divider()),
-        Text("  Or sign in with  ", style: context.textStyles.bodySmall),
+        Text("  ${context.l10n.orSignInWith}  ", style: context.textStyles.bodySmall),
         const Expanded(child: Divider()),
       ],
     );

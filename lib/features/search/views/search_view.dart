@@ -1,3 +1,4 @@
+import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/core/widgets/custom_app_bar.dart';
 import 'package:doctorine/core/widgets/om_search_text_field.dart';
@@ -14,7 +15,7 @@ class SearchView extends StatelessWidget {
         child: Column(
           children: [
             const VerticalSpace(height: 20),
-            const CustomAppBar(title: "search"),
+            CustomAppBar(title: context.l10n.search),
             const VerticalSpace(height: 25),
             const CustomSearchTextField(),
             Expanded(
@@ -22,7 +23,7 @@ class SearchView extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text('Item $index'),
+                    title: Text(context.l10n.searchItemPlaceholder(index.toString())),
                   );
                 },
               ),

@@ -1,3 +1,4 @@
+import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/core/router/app_routes.dart';
 import 'package:doctorine/core/theme/logic/theme_cubit.dart';
@@ -19,20 +20,20 @@ class SettingsView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            const CustomAppBar(title: "Settings"),
+            CustomAppBar(title: context.l10n.settings),
             const VerticalSpace(height: 32),
-            const SettingsListTile(
+            SettingsListTile(
               icon: CupertinoIcons.bell,
-              title: "Notification",
+              title: context.l10n.notification,
             ),
             SettingsListTile(
               icon: CupertinoIcons.question,
-              title: "FQA",
+              title: context.l10n.faq,
               onPressed: () => context.push(AppRoutes.faq),
             ),
             SettingsListTile(
               icon: Icons.language,
-              title: "Language",
+              title: context.l10n.language,
               onPressed: () => context.push(AppRoutes.languages),
             ),
             BlocBuilder<ThemeCubit, ThemeMode>(
@@ -40,7 +41,7 @@ class SettingsView extends StatelessWidget {
                 final isDark = themeMode == ThemeMode.dark;
                 return SettingsListTile(
                   icon: Icons.dark_mode,
-                  title: "Dark Mode",
+                  title: context.l10n.darkMode,
                   trailing: Switch(
                     value: isDark,
                     onChanged: (value) {
@@ -56,3 +57,4 @@ class SettingsView extends StatelessWidget {
     );
   }
 }
+

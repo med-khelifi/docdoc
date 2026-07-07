@@ -37,12 +37,12 @@ class DoctorsBlueContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Book and\nschedule with\nnearest doctor',
+            context.l10n.bookAndScheduleTitle,
             style: context.textStyles.displayMedium?.copyWith(height: 1.4),
             textAlign: TextAlign.start,
           ),
           const Spacer(),
-          SecondaryButton(onPressed: () {}, text: "Find Nearby"),
+          SecondaryButton(onPressed: () {}, text: context.l10n.findNearby),
         ],
       ),
     );

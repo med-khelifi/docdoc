@@ -16,7 +16,7 @@ class OnboardingView extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(bottom: 35, left: 20, right: 20),
         child: PrimaryButton(
-          text: "Get Started",
+          text: context.l10n.getStarted,
           onPressed: () => context.push(AppRoutes.login),
         ),
       ),
@@ -30,7 +30,7 @@ class OnboardingView extends StatelessWidget {
               const VerticalSpace(height: 40),
               const DoctorImageWithTitle(),
               Text(
-                "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
+                context.l10n.onboardingDescription,
                 textAlign: TextAlign.center,
                 style: context.textStyles.bodySmall,
               ),
