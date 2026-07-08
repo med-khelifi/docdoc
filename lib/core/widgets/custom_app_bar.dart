@@ -54,8 +54,9 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       width: 45,
       height: 45,
-      padding: const EdgeInsets.only(
-        left: 10,
+      padding:  EdgeInsets.only(
+        left: context.isArabic ? 0: 10,
+        right: context.isArabic ? 10: 0,
       ),
       decoration: BoxDecoration(
           border: Border.all(color: context.colorScheme.surface, width: 1),

@@ -1,10 +1,11 @@
 import 'package:doctorine/core/theme/extensions/onboarding_gradient_theme_extension.dart';
 import 'package:doctorine/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 extension BuildContextExtensions on BuildContext {
   S get l10n => S.of(this);
-
+  bool get isArabic => Intl.getCurrentLocale() == 'ar';
   TextTheme get textStyles => Theme.of(this).textTheme;
   IconThemeData get iconStyles => Theme.of(this).iconTheme;
   IconButtonThemeData get iconButtonStyles => Theme.of(this).iconButtonTheme;
@@ -21,4 +22,3 @@ extension BuildContextExtensions on BuildContext {
   InputDecorationThemeData get inputFieldTheme =>
       Theme.of(this).inputDecorationTheme;
 }
-

@@ -15,7 +15,7 @@ class DoctorsBlueContainer extends StatelessWidget {
         child: Stack(
           clipBehavior: Clip.none,
           alignment: Alignment.bottomCenter,
-          children: [_buildBlueContainer(context), _buildImage()],
+          children: [_buildBlueContainer(context), _buildImage(context)],
         ),
       ),
     );
@@ -48,10 +48,11 @@ class DoctorsBlueContainer extends StatelessWidget {
     );
   }
 
-  Positioned _buildImage() {
+  Positioned _buildImage(BuildContext context) {
     return Positioned(
-      right: 8,
+      right: context.isArabic ? null : 8,
       bottom: 0,
+      left: context.isArabic ? 8 : null,
       child: Image.asset(
         AppAssets.assetsImagesOnboardingDoctor,
         fit: BoxFit.cover,
