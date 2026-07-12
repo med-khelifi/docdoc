@@ -28,16 +28,14 @@ class CustomSearchTextField extends StatelessWidget {
         ),
         if (isFilterEnabled ?? true) ...[
           const HorizontalSpace(width: 8),
-          IconButton(
-              onPressed: onFilterPressed,
-              style: IconButton.styleFrom(
-                backgroundColor: AppColors.transparent,
-              ),
-              icon: Icon(
-                Icons.filter_list_outlined,
-                color: context.colorScheme.tertiary,
-                size: 32,
-              ))
+          GestureDetector(
+            onTap: onFilterPressed,
+            child: Icon(
+              Icons.filter_list_outlined,
+              color: context.colorScheme.tertiary,
+              size: 32,
+            ),
+          )
         ]
       ],
     );

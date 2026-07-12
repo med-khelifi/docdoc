@@ -453,6 +453,46 @@ class S {
   String get profile {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
+
+  /// `Sort By`
+  String get sortBy {
+    return Intl.message('Sort By', name: 'sortBy', desc: '', args: []);
+  }
+
+  /// `Speciality`
+  String get speciality {
+    return Intl.message('Speciality', name: 'speciality', desc: '', args: []);
+  }
+
+  /// `Rating`
+  String get rating {
+    return Intl.message('Rating', name: 'rating', desc: '', args: []);
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message('Apply', name: 'apply', desc: '', args: []);
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message('All', name: 'all', desc: '', args: []);
+  }
+
+  /// `General`
+  String get general {
+    return Intl.message('General', name: 'general', desc: '', args: []);
+  }
+
+  /// `Neurologic`
+  String get neurologic {
+    return Intl.message('Neurologic', name: 'neurologic', desc: '', args: []);
+  }
+
+  /// `Pediatric`
+  String get pediatric {
+    return Intl.message('Pediatric', name: 'pediatric', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,9 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/router/app_routes.dart';
 import 'package:doctorine/features/auth/views/fill_profile_view.dart';
+import 'package:doctorine/features/auth/views/forgot_password_view.dart';
 import 'package:doctorine/features/auth/views/login_view.dart';
 import 'package:doctorine/features/auth/views/sign_up_view.dart';
-import 'package:doctorine/features/auth/views/forgot_password_view.dart';
 import 'package:doctorine/features/home/home_view.dart';
 import 'package:doctorine/features/onboarding/ui/onboarding_view.dart';
 import 'package:doctorine/features/profile/views/personal_information_view.dart';
@@ -12,9 +16,6 @@ import 'package:doctorine/features/root/views/root_view.dart';
 import 'package:doctorine/features/settings/views/faq_view.dart';
 import 'package:doctorine/features/settings/views/language_view.dart';
 import 'package:doctorine/features/settings/views/settings_view.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class AppRouter {
   AppRouter._();

@@ -70,5 +70,13 @@
       }
     }
   },
-  "profile": "الملف الشخصي"
+  "profile": "الملف الشخصي",
+  "sortBy": "تصنيف حسب",
+  "speciality": "التخصص",
+  "rating": "التقييم",
+  "apply": "تطبيق",
+  "all": "الكل",
+  "general": "عام",
+  "neurologic": "مخ وأعصاب",
+  "pediatric": "أطفال"
 }

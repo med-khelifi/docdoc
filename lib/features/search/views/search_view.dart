@@ -1,5 +1,6 @@
 import 'package:doctorine/core/extensions/build_context_extensions.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
+import 'package:doctorine/core/widgets/bottom_sheet.dart';
 import 'package:doctorine/core/widgets/custom_app_bar.dart';
 import 'package:doctorine/core/widgets/om_search_text_field.dart';
 import 'package:flutter/material.dart';
@@ -15,15 +16,25 @@ class SearchView extends StatelessWidget {
         child: Column(
           children: [
             const VerticalSpace(height: 20),
-            CustomAppBar(title: context.l10n.search),
+            CustomAppBar(
+              title: context.l10n.search,
+              backIcon: const SizedBox.shrink(),
+            ),
             const VerticalSpace(height: 25),
-            const CustomSearchTextField(),
+            CustomSearchTextField(
+              onFilterPressed: () {
+                showBottomSheet(
+                    context: context,
+                    builder: (context) => SortByBottomSheet());
+              },
+            ),
             Expanded(
               child: ListView.builder(
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(context.l10n.searchItemPlaceholder(index.toString())),
+                    title: Text(
+                        context.l10n.searchItemPlaceholder(index.toString())),
                   );
                 },
               ),

@@ -28,10 +28,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "all": MessageLookupByLibrary.simpleMessage("All"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
     "and": MessageLookupByLibrary.simpleMessage("and "),
+    "apply": MessageLookupByLibrary.simpleMessage("Apply"),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
     "bookAndScheduleTitle": MessageLookupByLibrary.simpleMessage(
@@ -71,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Forgot Password",
     ),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "general": MessageLookupByLibrary.simpleMessage("General"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "hiUser": m1,
     "howAreYouToday": MessageLookupByLibrary.simpleMessage(
@@ -78,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "neurologic": MessageLookupByLibrary.simpleMessage("Neurologic"),
     "notification": MessageLookupByLibrary.simpleMessage("Notification"),
     "onboardingDescription": MessageLookupByLibrary.simpleMessage(
       "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
@@ -87,9 +91,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "orSignInWith": MessageLookupByLibrary.simpleMessage("Or sign in with"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "pediatric": MessageLookupByLibrary.simpleMessage("Pediatric"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy."),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "rating": MessageLookupByLibrary.simpleMessage("Rating"),
     "recommendationDoctor": MessageLookupByLibrary.simpleMessage(
       "Recommendation Doctor",
     ),
@@ -102,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "sortBy": MessageLookupByLibrary.simpleMessage("Sort By"),
+    "speciality": MessageLookupByLibrary.simpleMessage("Speciality"),
     "submit": MessageLookupByLibrary.simpleMessage("Submit"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "Terms & Conditions ",

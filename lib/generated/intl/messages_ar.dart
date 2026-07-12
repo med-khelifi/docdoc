@@ -28,10 +28,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "all": MessageLookupByLibrary.simpleMessage("الكل"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟ ",
     ),
     "and": MessageLookupByLibrary.simpleMessage("و "),
+    "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
     "bookAndScheduleTitle": MessageLookupByLibrary.simpleMessage(
@@ -69,11 +71,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "نسيت كلمة المرور",
     ),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "general": MessageLookupByLibrary.simpleMessage("عام"),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "hiUser": m1,
     "howAreYouToday": MessageLookupByLibrary.simpleMessage("كيف حالك اليوم؟"),
     "language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "neurologic": MessageLookupByLibrary.simpleMessage("مخ وأعصاب"),
     "notification": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "onboardingDescription": MessageLookupByLibrary.simpleMessage(
       "إدارة وجدولة جميع مواعيدك الطبية بسهولة مع Docdoc للحصول على تجربة جديدة.",
@@ -85,9 +89,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "أو سجل دخولك باستخدام",
     ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "pediatric": MessageLookupByLibrary.simpleMessage("أطفال"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية."),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "rating": MessageLookupByLibrary.simpleMessage("التقييم"),
     "recommendationDoctor": MessageLookupByLibrary.simpleMessage(
       "الأطباء الموصى بهم",
     ),
@@ -102,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "sortBy": MessageLookupByLibrary.simpleMessage("تصنيف حسب"),
+    "speciality": MessageLookupByLibrary.simpleMessage("التخصص"),
     "submit": MessageLookupByLibrary.simpleMessage("إرسال"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "الشروط والأحكام ",

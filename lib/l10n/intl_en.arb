@@ -70,5 +70,13 @@
       }
     }
   },
-  "profile": "Profile"
+  "profile": "Profile",
+  "sortBy": "Sort By",
+  "speciality": "Speciality",
+  "rating": "Rating",
+  "apply": "Apply",
+  "all": "All",
+  "general": "General",
+  "neurologic": "Neurologic",
+  "pediatric": "Pediatric"
 }
