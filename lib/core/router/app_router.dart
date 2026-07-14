@@ -1,3 +1,4 @@
+import 'package:doctorine/features/doctors/views/doctor_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -20,7 +21,7 @@ import 'package:doctorine/features/settings/views/settings_view.dart';
 class AppRouter {
   AppRouter._();
   static final GoRouter router = GoRouter(
-    initialLocation: AppRoutes.root,
+    initialLocation: AppRoutes.doctorDetails,
     routes: [
       GoRoute(
         path: AppRoutes.root,
@@ -79,6 +80,11 @@ class AppRouter {
         path: AppRoutes.faq,
         name: AppRoutes.faq,
         builder: (context, state) => const FaqView(),
+      ),
+      GoRoute(
+        path: AppRoutes.doctorDetails,
+        name: AppRoutes.doctorDetails,
+        builder: (context, state) => const DoctorDetails(),
       ),
     ],
     errorBuilder: (context, state) =>

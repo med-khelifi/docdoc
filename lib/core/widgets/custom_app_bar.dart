@@ -9,13 +9,16 @@ class CustomAppBar extends StatelessWidget {
     this.trailing,
     this.backIcon,
     this.onTrailingTap,
-    this.onBackTap,
+    this.onBackTap, this.leadingPadding, this.trailingPadding,
   });
   final String title;
   final Widget? backIcon;
   final Widget? trailing;
   final VoidCallback? onTrailingTap;
   final VoidCallback? onBackTap;
+
+  final double? leadingPadding;
+  final double? trailingPadding;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,6 +33,7 @@ class CustomAppBar extends StatelessWidget {
                   color: context.colorScheme.secondary,
                 ),
                 onTap: onBackTap ?? () => context.pop(),
+                padding: leadingPadding,
               ),
           const Spacer(),
           Text(
@@ -42,6 +46,7 @@ class CustomAppBar extends StatelessWidget {
               context,
               child: trailing,
               onTap: onTrailingTap,
+              padding: trailingPadding,
             ),
           ]
         ],
@@ -50,13 +55,13 @@ class CustomAppBar extends StatelessWidget {
   }
 
   Container _buildContainer(BuildContext context,
-      {Widget? child, VoidCallback? onTap}) {
+      {Widget? child, VoidCallback? onTap, double? padding}) {
     return Container(
       width: 45,
       height: 45,
-      padding:  EdgeInsets.only(
-        left: context.isArabic ? 0: 10,
-        right: context.isArabic ? 10: 0,
+      padding: EdgeInsets.only(
+        left: context.isArabic ? 0 : (padding ?? 10),
+        right: context.isArabic ? (padding ?? 10) : 0,
       ),
       decoration: BoxDecoration(
           border: Border.all(color: context.colorScheme.surface, width: 1),
