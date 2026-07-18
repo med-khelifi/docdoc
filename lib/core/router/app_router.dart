@@ -1,3 +1,4 @@
+import 'package:doctorine/features/doctors/logic/doctor_details_tab_cubit/doctor_details_tab_cubit.dart';
 import 'package:doctorine/features/doctors/views/doctor_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -84,7 +85,10 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.doctorDetails,
         name: AppRoutes.doctorDetails,
-        builder: (context, state) => const DoctorDetailsView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => DoctorDetailsTabCubit(),
+          child: const DoctorDetailsView(),
+        ),
       ),
     ],
     errorBuilder: (context, state) =>
