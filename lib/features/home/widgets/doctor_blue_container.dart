@@ -38,7 +38,8 @@ class DoctorsBlueContainer extends StatelessWidget {
         children: [
           Text(
             context.l10n.bookAndScheduleTitle,
-            style: context.textStyles.displayMedium?.copyWith(height: 1.4),
+            style: context.textStyles.displayMedium
+                ?.copyWith(height: 1.4, color: context.colorScheme.surface),
             textAlign: TextAlign.start,
           ),
           const Spacer(),
