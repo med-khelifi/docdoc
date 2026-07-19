@@ -1,5 +1,6 @@
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/core/widgets/custom_app_bar.dart';
+import 'package:doctorine/core/widgets/primary_button.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_bar.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_content.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tile.dart';
@@ -10,8 +11,8 @@ class DoctorDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SingleChildScrollView(
+    return Scaffold(
+      body: const SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
@@ -28,6 +29,13 @@ class DoctorDetailsView extends StatelessWidget {
             VerticalSpace(height: 24),
             DoctorDetailsTabContent(),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 20, right: 12, left: 12),
+        child: PrimaryButton(
+          text: "Make An Appointment",
+          onPressed: () {},
         ),
       ),
     );

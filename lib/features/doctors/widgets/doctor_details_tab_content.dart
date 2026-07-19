@@ -31,19 +31,43 @@ class AboutTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'About Doctor',
-          style: context.textStyles.titleMedium,
-        ),
-        const VerticalSpace(height: 8),
-        Text(
-          'Dr. Randy Wigham is a highly skilled and experienced medical professional specializing in cardiology. With over 15 years of practice, he has helped countless patients achieve better heart health through personalized treatment plans and compassionate care.',
-          style: context.textStyles.bodyMedium,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'About Doctor',
+            style: context.textStyles.labelMedium,
+          ),
+          const VerticalSpace(height: 8),
+          Text(
+            '''
+Dr. Jenny Watson is the top most Immunologists specialist in Christ Hospital at London. She achived several awards for her wonderful contribution in medical field. She is available for private consultation.
+    ''',
+            style: context.textStyles.bodyMedium,
+          ),
+          Text(
+            'Working Time',
+            style: context.textStyles.labelMedium,
+          ),
+          const VerticalSpace(height: 8),
+          Text(
+            'Monday - Friday, 08.00 AM - 20.00 PM',
+            style: context.textStyles.bodyMedium,
+          ),
+          const VerticalSpace(height: 8),
+          Text(
+            'STR',
+            style: context.textStyles.labelMedium,
+          ),
+          const VerticalSpace(height: 8),
+          Text(
+            '4726482464',
+            style: context.textStyles.bodyMedium,
+          ),
+        ],
+      ),
     );
   }
 }
