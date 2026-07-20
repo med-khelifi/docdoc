@@ -1,6 +1,8 @@
+import 'package:doctorine/core/Functions/show_bottom_sheet.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/core/widgets/custom_app_bar.dart';
 import 'package:doctorine/core/widgets/primary_button.dart';
+import 'package:doctorine/core/widgets/rating_bottom_sheet.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_bar.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_content.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tile.dart';
@@ -35,7 +37,10 @@ class DoctorDetailsView extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 20, right: 12, left: 12),
         child: PrimaryButton(
           text: "Make An Appointment",
-          onPressed: () {},
+          onPressed: () {
+            showAppBottomSheet(
+                context: context, bottomSheet: const RatingBottomSheet());
+          },
         ),
       ),
     );

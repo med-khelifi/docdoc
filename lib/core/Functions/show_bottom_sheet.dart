@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Opens the Sort By bottom sheet.
-Future<Map<String, String>?> showBottomSheet(
+Future<Map<String, String>?> showAppBottomSheet(
     {required BuildContext context, required Widget bottomSheet}) {
   return showModalBottomSheet<Map<String, String>>(
     context: context,
