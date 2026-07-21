@@ -1,12 +1,16 @@
 import 'package:doctorine/core/Functions/show_bottom_sheet.dart';
 import 'package:doctorine/core/helpers/spaces.dart';
+import 'package:doctorine/core/theme/app_colors.dart';
 import 'package:doctorine/core/widgets/custom_app_bar.dart';
 import 'package:doctorine/core/widgets/primary_button.dart';
 import 'package:doctorine/core/widgets/rating_bottom_sheet.dart';
+import 'package:doctorine/features/doctors/logic/doctor_details_tab_cubit/doctor_details_tab_cubit.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_bar.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tab_content.dart';
 import 'package:doctorine/features/doctors/widgets/doctor_details_tile.dart';
+import 'package:doctorine/features/doctors/widgets/s_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DoctorDetailsView extends StatelessWidget {
   const DoctorDetailsView({super.key});
@@ -14,22 +18,25 @@ class DoctorDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const SingleChildScrollView(
+      body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            VerticalSpace(height: 25),
-            CustomAppBar(
-              title: 'Doctor Details',
-              trailing: Icon(Icons.more_horiz),
-              trailingPadding: 0,
+        child: CustomScrollView(
+          slivers: [
+            SliverVerticalSpace(height: 25),
+            SBox(
+              child: CustomAppBar(
+                title: 'Doctor Details',
+                trailing: Icon(Icons.more_horiz),
+                trailingPadding: 0,
+              ),
             ),
-            VerticalSpace(height: 24),
-            DoctorDetailsTile(),
-            VerticalSpace(height: 24),
-            DoctorDetailsTabBar(),
-            VerticalSpace(height: 24),
-            DoctorDetailsTabContent(),
+            SliverVerticalSpace(height: 24),
+            SBox(child: DoctorDetailsTile()),
+            SliverVerticalSpace(height: 24),
+            SBox(child: DoctorDetailsTabBar()),
+            SliverVerticalSpace(height: 24),
+            SliverFillRemaining(
+                hasScrollBody: true, child: DoctorDetailsTabContent()),
           ],
         ),
       ),
@@ -43,6 +50,19 @@ class DoctorDetailsView extends StatelessWidget {
           },
         ),
       ),
+      floatingActionButton:
+          BlocBuilder<DoctorDetailsTabCubit, int>(builder: (context, state) {
+        return state == 2
+            ? AnimatedContainer(
+                height: 25,
+                width: 25,
+                duration: const Duration(microseconds: 500),
+                decoration: const BoxDecoration(
+                    color: AppColors.mainBlue, shape: BoxShape.circle),
+                child: const Icon(Icons.add),
+              )
+            : const SizedBox.shrink();
+      }),
     );
   }
 }

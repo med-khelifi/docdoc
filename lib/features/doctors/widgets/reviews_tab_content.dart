@@ -1,4 +1,3 @@
-
 import 'package:doctorine/core/helpers/spaces.dart';
 import 'package:doctorine/features/doctors/widgets/review_card.dart';
 import 'package:flutter/material.dart';
@@ -8,21 +7,12 @@ class ReviewsTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        VerticalSpace(height: 8),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-        ReviewCard(),
-      ],
+    return ListView.separated(
+      padding: const EdgeInsets.only(bottom: 200),
+      //physics: const (),
+      itemCount: 20,
+      itemBuilder: (context, index) => const ReviewCard(),
+      separatorBuilder: (context, index) => const VerticalSpace(height: 20),
     );
   }
 }
